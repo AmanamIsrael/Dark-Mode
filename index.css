@@ -1,0 +1,56 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: grid;
+    place-content: center;
+    border: 2px solid palevioletred;
+    height:100vh;
+    transition: all ease .2s
+}
+.darkmode{
+    background-color: rgb(54, 54, 54);
+    border: 2px solid #fff;
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 10rem;
+    height: 5rem;
+    background-color: #b5a8ff;
+    border-radius: 5rem;
+}
+h1{
+    text-align: center;
+    font-family: monospace;
+}
+.header{
+    color: white;
+}
+
+.switch::after{
+    content: '';
+    position: absolute;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: #685da7;
+    top: 4px;
+    left: 4px;
+    transition: all ease.3s;
+}
+.move::after{
+    left: 84px;
+}
+.checkbox:checked + .switch::after {
+    left: 20px
+}
+.checkbox:checked + .switch {
+    background-color: #7983ff;
+}
+.checkbox {
+    display:none;
+}
